@@ -6,6 +6,7 @@
 #include <Poco/Util/HelpFormatter.h>
 #include <Poco/Util/OptionCallback.h>
 
+#include "Testing.hpp"
 #include "config.hpp"
 #include <nng/transport/tcp/tcp.h>
 
@@ -80,9 +81,13 @@ class Main_app: public Application {
 
 				log.information("Application options : " , 					__FILE__,__LINE__);
 				log.information("  -port             : " + std::to_string(port) , 	__FILE__,__LINE__);
+				log.debug("Testing debug");
 			}
 
 			nng_tcp_register();
+
+			Testing t;
+			t.method_testing();
 
 			return Application::EXIT_OK;
 		}

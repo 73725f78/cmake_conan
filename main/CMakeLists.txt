@@ -1,5 +1,5 @@
 #============================================
-#configure_file(${CMAKE_CURRENT_SOURCE_DIR}/src/logger.properties aes.properties COPYONLY)
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/src/logger.properties main.properties COPYONLY)
 
 add_executable(main
 	${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp
@@ -12,9 +12,10 @@ target_include_directories(main
 )
 
 target_link_libraries(main
-	Poco::Util
 	Poco::Foundation
+	Poco::Util
 	nng::nng
+	testing_lib
 )
 
 #============================================

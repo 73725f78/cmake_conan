@@ -5,8 +5,8 @@ cmake_minimum_required(VERSION 3.28)
 
 project(Main VERSION 0.1.0)
 
-set(CMAKE_BUILD_TYPE Debug)
-#set(CMAKE_BUILD_TYPE Release)
+#set(CMAKE_BUILD_TYPE Debug)
+set(CMAKE_BUILD_TYPE Release)
 
 include(GNUInstallDirs)
 
@@ -21,7 +21,7 @@ find_package(Poco REQUIRED COMPONENTS Foundation Util)
 find_package(nng REQUIRED)
 
 add_subdirectory(main)
-#add_subdirectory(tests)
+add_subdirectory(testing_lib)
 
 #Pack configurations
 set(CMAKE_SYSTEM_NAME Linux)
