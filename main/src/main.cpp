@@ -1,4 +1,3 @@
-#include <fstream>
 #include <iostream>
 #include <Poco/Util/Option.h>
 #include <Poco/Util/OptionSet.h>
