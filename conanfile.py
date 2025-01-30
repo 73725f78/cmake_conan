@@ -12,6 +12,7 @@ class CompressorRecipe(ConanFile):
 
     def requirements(self):
         self.requires("poco/1.13.0")
+        self.requires("gtest/1.15.0")
         self.requires("nng/1.7.1")
 
     # def build_requirements(self):

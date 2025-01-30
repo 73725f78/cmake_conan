@@ -15,10 +15,12 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 configure_file(main/include/config.h.in config.hpp)
 
 find_package(Poco REQUIRED COMPONENTS Foundation Util)
+find_package(GTest CONFIG REQUIRED COMPONENTS GTest GMock)
 find_package(nng REQUIRED)
 
 add_subdirectory(main)
 add_subdirectory(testing_lib)
+add_subdirectory(gtests)
 
 #Pack configurations
 set(CMAKE_SYSTEM_NAME Linux)

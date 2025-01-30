@@ -19,5 +19,8 @@ install_conan_deps:
 install_deps:
 	pip install conan
 
+tests: toolchain
+	cd build/ && ctest --test-dir gtests/ -V
+
 clean:
 	cd build && rm -rf *
