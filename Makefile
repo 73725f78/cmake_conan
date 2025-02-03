@@ -17,7 +17,10 @@ install_conan_deps:
 	cd build && conan install .. --build=missing --settings=build_type=Debug
 
 install_deps:
-	pip install conan
+	echo "Leer opciones en el Makefile"
+	#conan de puede descargar del conan center para ubuntu he instalar con sudo apt (mi recomendacion)
+	#pip install conan				#Se requieren virtual environment en python3.12 > o mayores.
+	#sudo apt install libnsl-dev			#Se en ubuntu 24.04 LTS (posiblemente oara nng)
 
 tests: toolchain
 	cd build/ && ctest --test-dir gtests/ -V
